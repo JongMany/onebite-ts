@@ -2,7 +2,6 @@
   "name": "section6",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^22.9.0"
+  },
+  "ts-node": {
+    "esm": true
   }
 }

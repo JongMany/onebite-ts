@@ -5,7 +5,9 @@
     "outDir": "dist",
     "strict": true,
     "moduleDetection": "force",
-    "allowJs": true
+    "allowJs": true,
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "Node"
   },
   "ts-node": {
     "esm": true
