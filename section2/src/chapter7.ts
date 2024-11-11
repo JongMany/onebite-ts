@@ -15,3 +15,11 @@ let a: void;
 // a = "hello";
 // a = {};
 a = undefined;
+
+// never -> 존재하지 않은 = 불가능한 타입
+function func3(): never {
+  while (true) {}
+}
+function func4(): never {
+  throw new Error();
+}
