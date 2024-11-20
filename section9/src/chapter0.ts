@@ -28,7 +28,21 @@ let varC: StringNumberSwitch<number | string>; // string | number
   result?.toUpperCase();
 }
 
-// 해결
+// 1차 해결
+{
+  function removeSpaces<T>(text: T): T extends string ? string : undefined {
+    // 함수 내부에서는 조건부 타입의 결과를 알 수 없다
+    if (typeof text === "string") return text.replaceAll(" ", "") as any;
+    else return undefined as any;
+  }
+
+  let result = removeSpaces("hi im winterlood");
+  result.toUpperCase();
+
+  let result2 = removeSpaces(undefined);
+}
+
+// 완전 해결
 {
   function removeSpaces<T>(text: T): T extends string ? string : undefined;
   function removeSpaces(text: any) {
